@@ -1,0 +1,29 @@
+{
+  "name": "edu-manage-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "local": "ts-node ./src/server.ts",
+    "dev": "set NODE_ENV=development && npm run build &&  node build/server.js",
+    "stage": "set NODE_ENV=staging && npm run build && node build/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/winston": "^2.4.4",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "find-config": "^1.0.0",
+    "prom-client": "^12.0.0",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.4.2"
+  }
+}
